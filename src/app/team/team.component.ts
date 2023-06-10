@@ -29,8 +29,11 @@ token = 'eyJhbGciOiJSUzI1NiIsImtpZCI6IjVFODQ4MjE0Qzc3MDczQUU1QzJCREU1Q0NENTQ0ODl
 
   makeCall() {
     const phoneToCall = this.calleePhoneInput;
+    // this.call = this.callAgent.startCall([{ phoneNumber: phoneToCall }], {
+    //   alternateCallerId: { phoneNumber: 'ACS Number' }
+    // }
     this.call = this.callAgent.startCall([{ id: phoneToCall }],
-      {});
+    );
   }
 
   hangUpCall() {
